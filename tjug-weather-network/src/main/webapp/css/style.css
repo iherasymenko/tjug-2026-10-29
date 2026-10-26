@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+    padding: 24px 16px;
+    background-color: #008080;
+    font-family: Tahoma, "MS Sans Serif", Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #000000;
+}
+
+.window {
+    max-width: 760px;
+    margin: 0 auto;
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    box-shadow: 1px 1px 0 #000000;
+}
+
+.title-bar {
+    padding: 3px 6px;
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.menu-bar {
+    padding: 3px 6px;
+    border-bottom: 1px solid #808080;
+}
+
+.menu-bar a {
+    margin-right: 12px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu-bar a:hover {
+    text-decoration: underline;
+}
+
+.units-switch {
+    float: right;
+}
+
+.window-body {
+    padding: 12px;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    color: #000080;
+}
+
+h2 {
+    margin: 18px 0 8px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: #000080;
+}
+
+input[type="text"], textarea {
+    padding: 2px 4px;
+    font-family: inherit;
+    font-size: 13px;
+    border: 2px solid;
+    border-color: #404040 #ffffff #ffffff #404040;
+}
+
+.search {
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #808080;
+}
+
+.toolbar {
+    margin-bottom: 8px;
+}
+
+.toolbar form {
+    display: inline;
+    margin-right: 12px;
+}
+
+.xml-badge {
+    padding: 0 3px;
+    background-color: #ff6600;
+    color: #ffffff;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid;
+    border-color: #ffc8a0 #7f3300 #7f3300 #ffc8a0;
+}
+
+.coordinates, .local-time {
+    color: #404040;
+    font-size: 11px;
+}
+
+.current-conditions, .country-profile {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #404040 #ffffff #ffffff #404040;
+}
+
+.country-profile img {
+    border: 1px solid #808080;
+}
+
+.current-conditions .temperature {
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000080;
+}
+
+table.forecast img, .sunken td img, .last-year img {
+    vertical-align: middle;
+}
+
+.unavailable {
+    color: #808080;
+    font-style: italic;
+}
+
+.search-results li {
+    margin-bottom: 4px;
+}
+
+.guestbook-form {
+    margin-bottom: 12px;
+}
+
+.guestbook-form label {
+    display: block;
+    margin: 8px 0 3px;
+}
+
+.guestbook-form input, .guestbook-form textarea {
+    display: block;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.guestbook-form button {
+    margin-top: 10px;
+}
+
+.guestbook-entry {
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #404040 #ffffff #ffffff #404040;
+}
+
+.guestbook-entry-header {
+    padding: 2px 6px;
+    background-color: #ffffcc;
+    border-bottom: 1px dotted #c0c0c0;
+}
+
+.guestbook-entry-message {
+    padding: 4px 6px;
+    white-space: pre-wrap;
+}
+
+.hit-counter-line {
+    text-align: center;
+}
+
+.hit-counter {
+    padding: 1px 4px;
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border: 2px solid;
+    border-color: #404040 #ffffff #ffffff #404040;
+}
+
+a {
+    color: #0000ee;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #ffffff;
+}
+
+button {
+    padding: 3px 12px;
+    background-color: #c0c0c0;
+    font-family: inherit;
+    font-size: 12px;
+    border: 2px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    cursor: pointer;
+}
+
+button:active {
+    border-color: #404040 #ffffff #ffffff #404040;
+}
+
+.sunken {
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #404040 #ffffff #ffffff #404040;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    padding: 3px 6px;
+    background-color: #c0c0c0;
+    text-align: left;
+    border: 1px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+}
+
+td {
+    padding: 2px 6px;
+    border-bottom: 1px dotted #c0c0c0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffcc;
+}
+
+.error {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.new {
+    color: #ff0000;
+    font-weight: bold;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        visibility: hidden;
+    }
+}
+
+.footer {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 11px;
+    color: #404040;
+}

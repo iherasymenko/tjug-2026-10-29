@@ -1,0 +1,40 @@
+<fmt:setLocale value="en_US"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><c:out value="${pageTitle}"/> - TJUG Weather Network</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+</head>
+<body>
+<div class="window">
+    <div class="title-bar">TJUG Weather Network - <c:out value="${pageTitle}"/></div>
+    <div class="menu-bar">
+        <a href="${pageContext.request.contextPath}/">Home</a>
+        <a href="${pageContext.request.contextPath}/guestbook">Guestbook</a>
+        <span class="units-switch">
+            Units:
+            <c:url var="metricUrl" value="/units">
+                <c:param name="system" value="metric"/>
+                <c:param name="back" value="${currentUrl}"/>
+            </c:url>
+            <c:url var="imperialUrl" value="/units">
+                <c:param name="system" value="imperial"/>
+                <c:param name="back" value="${currentUrl}"/>
+            </c:url>
+            <c:choose>
+                <c:when test="${units == 'IMPERIAL'}">
+                    <a href="${metricUrl}">&deg;C</a> | <b>&deg;F</b>
+                </c:when>
+                <c:otherwise>
+                    <b>&deg;C</b> | <a href="${imperialUrl}">&deg;F</a>
+                </c:otherwise>
+            </c:choose>
+        </span>
+    </div>
+    <div class="window-body">
+        <form class="search" action="${pageContext.request.contextPath}/search" method="get">
+            <label for="q">Find your city:</label>
+            <input type="text" id="q" name="q" size="30" value="<c:out value='${query}'/>">
+            <button type="submit">Search</button>
+        </form>

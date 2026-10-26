@@ -1,0 +1,11 @@
+        <hr>
+        <div class="footer">
+            Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>,
+            country data by <a href="http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso">oorsprong.org</a><br>
+            Best viewed in Netscape Navigator 4.0 at 800x600<br>
+            &copy; TJUG Weather Network
+        </div>
+    </div>
+</div>
+</body>
+</html>
