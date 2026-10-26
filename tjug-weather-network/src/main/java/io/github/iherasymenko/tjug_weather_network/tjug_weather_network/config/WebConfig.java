@@ -38,6 +38,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/css/**").addResourceLocations("/css/");
         registry.addResourceHandler("/images/**").addResourceLocations("/images/");
+        registry.addResourceHandler("/favicon.ico").addResourceLocations("/");
     }
 
     @Bean

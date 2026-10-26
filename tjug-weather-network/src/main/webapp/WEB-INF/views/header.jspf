@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title><c:out value="${pageTitle}"/> - TJUG Weather Network</title>
+    <link rel="icon" href="${pageContext.request.contextPath}/favicon.ico">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>

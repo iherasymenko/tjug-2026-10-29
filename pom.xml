@@ -11,6 +11,7 @@
 
     <modules>
         <module>tjug-weather-network</module>
+        <module>tjug-weather-network-launcher</module>
     </modules>
 
     <properties>
@@ -25,7 +26,9 @@
         <jakarta.servlet.jsp-api.version>4.0.0</jakarta.servlet.jsp-api.version>
         <jakarta.servlet.jsp.jstl-api.version>3.0.2</jakarta.servlet.jsp.jstl-api.version>
         <glassfish-jstl.version>3.0.1</glassfish-jstl.version>
+        <tomcat.version>11.0.27</tomcat.version>
         <maven-war-plugin.version>3.5.1</maven-war-plugin.version>
+        <exec-maven-plugin.version>3.6.4</exec-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -83,6 +86,22 @@
                 <artifactId>jakarta.servlet.jsp.jstl</artifactId>
                 <version>${glassfish-jstl.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-jasper</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.iherasymenko.tjug_weather_network</groupId>
+                <artifactId>tjug-weather-network</artifactId>
+                <version>${project.version}</version>
+                <classifier>classes</classifier>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -99,8 +118,22 @@
                     <artifactId>maven-war-plugin</artifactId>
                     <version>${maven-war-plugin.version}</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>${exec-maven-plugin.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
+    <profiles>
+        <profile>
+            <id>run</id>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
